@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 
 
 interface User {
@@ -23,6 +23,14 @@ const UsersPage = async () => {
           </li>
         ))}
       </ul>
+      <div className="container">
+        <Link
+          href="/users/new"
+          className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+        >
+         Add New User
+        </Link>
+      </div>
     </>
   );
 };
